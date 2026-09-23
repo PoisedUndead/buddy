@@ -20,7 +20,7 @@
 
 > Helping you on your journey to EdgeTX
 
-- [Use it online](https://buddy.edgetx.org/)
+- [Use it online](https://poisedundead.github.io/buddy/)
 - [Download the App](https://github.com/EdgeTX/buddy/releases/tag/latest)
 
 ## Development

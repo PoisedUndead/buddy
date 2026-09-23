@@ -104,17 +104,18 @@ module.exports = (_, { mode }) => ({
     ],
   },
   output: {
-    path: `${__dirname}/../build/renderer`,
-    filename: "[name]-[chunkhash].js",
-    chunkFilename: (pathData) =>
-      pathData.chunk.id.includes("locale")
-        ? "locales/[name]-[chunkhash].js"
-        : "[name]-[chunkhash].js",
-    clean: true,
-    chunkFormat: "array-push",
-    chunkLoading: "jsonp",
-    workerChunkLoading: "import-scripts",
-  },
+  path: `${__dirname}/../build/renderer`,
+  publicPath: "./",
+  filename: "[name]-[chunkhash].js",
+  chunkFilename: (pathData) =>
+    pathData.chunk.id.includes("locale")
+      ? "locales/[name]-[chunkhash].js"
+      : "[name]-[chunkhash].js",
+  clean: true,
+  chunkFormat: "array-push",
+  chunkLoading: "jsonp",
+  workerChunkLoading: "import-scripts",
+},
   optimization: {
     minimize: mode === "production",
     minimizer: [
